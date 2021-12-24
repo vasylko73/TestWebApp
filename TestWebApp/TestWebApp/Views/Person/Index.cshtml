@@ -1,0 +1,104 @@
+﻿@model IEnumerable<Person>
+
+<div class="container p-3">
+    <div class="row pt-4">
+        <div class="col-6">
+            <h2 class="text-primary">Persons List</h2>
+        </div>
+        <div class="col-6 text-right">
+            <a asp-controller="Person" asp-action="Create" class="btn btn-primary">Create New Expense</a>
+        </div>
+    </div>
+    <br />
+    @if (Model.Count() > 0)
+    {
+        <table id="myTable" class="table table-bordered table-condensed" style="width: 100%">
+            <thead>
+                <tr>
+                    <th onclick="sortTable(0)">@Html.DisplayNameFor(Model => Model.Id)</th>
+                    <th onclick="sortTable(1)">@Html.DisplayNameFor(Model => Model.DateOfBirth)</th>
+                    <th onclick="sortTable(2)">@Html.DisplayNameFor(Model => Model.Married)</th>
+                    <th onclick="sortTable(3)">@Html.DisplayNameFor(Model => Model.Salary)</th>
+                    <th onclick="sortTable(4)">@Html.DisplayNameFor(Model => Model.Phone)</th>
+                    <th>Changes</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var person in Model)
+                {
+                    <tr>
+                        <td width="15%">@Html.DisplayFor(p => person.Id)</td>
+                        <td width="15%">@Html.DisplayFor(p => person.DateOfBirth)</td>
+                        <td width="15%">@Html.DisplayFor(p => person.Married)</td>
+                        <td width="15%">@Html.DisplayFor(p => person.Salary)</td>
+                        <td width="15%">@Html.DisplayFor(p => person.Phone)</td>
+
+
+                        <td width="25%">
+                            <div class="w-100 btn-group" role="group">
+                                <a asp-controller="Person" asp-action="Update" asp-route-Id="@person.Id" class="btn btn-primary mx-1">Update</a>
+                                <a asp-controller="Person" asp-action="Delete" asp-route-Id="@person.Id" class="btn btn-danger mx-1">Delete</a>
+                            </div>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    }
+    else
+    {
+        <p>No items created yet </p>
+    }
+</div>
+
+
+@section Scripts
+{
+    
+<script>
+    function sortTable(n) {
+        var table, rows, switching, i, x, y, shouldSwitch, dir, switchcount = 0;
+        table = document.getElementById("myTable");
+        switching = true;
+        dir = "asc";
+        while (switching) {
+            switching = false;
+            rows = table.rows;
+            for (i = 1; i < (rows.length - 1); i++) {
+                shouldSwitch = false;
+                x = rows[i].getElementsByTagName("TD")[n];
+                y = rows[i + 1].getElementsByTagName("TD")[n];
+                if (dir == "asc") {
+                    if (x.innerHTML.toLowerCase() > y.innerHTML.toLowerCase()) {
+                        shouldSwitch = true;
+                        break;
+                    }
+                } else if (dir == "desc") {
+                    if (x.innerHTML.toLowerCase() < y.innerHTML.toLowerCase()) {
+                        shouldSwitch = true;
+                        break;
+                    }
+                }
+            }
+            if (shouldSwitch) {
+                rows[i].parentNode.insertBefore(rows[i + 1], rows[i]);
+                switching = true;
+                switchcount++;
+            } else {
+                if (switchcount == 0 && dir == "asc") {
+                    dir = "desc";
+                    switching = true;
+                }
+            }
+        }
+    }
+
+    $(function () {
+        $("#slider").slider();
+    });
+</script>
+
+<script>
+   
+</script>
+}

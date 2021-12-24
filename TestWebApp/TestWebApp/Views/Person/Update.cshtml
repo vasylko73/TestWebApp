@@ -1,0 +1,78 @@
+﻿@model Person
+
+<form method="post" asp-action="Update">
+    <input asp-for="Id" hidden/>
+    <div class="border p-3">
+        <div class="form-group row">
+            <h2 class="text-black-50 pl-3">Update Person</h2>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <div class="form-group row">
+                    <div class="col-2">
+                        <label asp-for="Name"></label>
+                    </div>
+                    <div class="col-2">
+                        <label asp-for="DateOfBirth"></label>
+                    </div>
+                    <div class="col-2">
+                        <label asp-for="Married"></label>
+                    </div>
+                    <div class="col-2">
+                        <label asp-for="Salary"></label>
+                    </div>
+                    <div class="col-2">
+                        <label asp-for="Phone"></label>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <div class="col-2">
+                        <input asp-for="Name" class="form-control"/>
+                        <span asp-validation-for="Name" class="text-danger"></span>
+                    </div>
+
+                    <div class="col-2">
+                        <input asp-for="DateOfBirth.Date" class="form-control" type="date"/>
+                    </div>
+
+                    <div class="form-group col-2">
+                        <select asp-for="Married" class="form-control">
+                            <option value="">Please select</option>
+                            <option value=true>Married</option>
+                            <option value=false>Not Married</option>
+                        </select>
+                    </div>
+
+                    <div class="col-2">
+                        <input asp-for="Salary" class="form-control"/>
+                        <span asp-validation-for="Salary" class="text-danger"></span>
+                    </div>
+
+                    <div class="col-2">
+                        <input asp-for="Phone" class="form-control"/>
+                        <span asp-validation-for="Phone" class="text-danger"></span>
+                    </div>
+
+                </div>
+                <div class="form-group row">
+                    <div class="col-8 offset-2 row">
+                        <div class="col">
+                            <input type="submit" class="btn btn-info w-75" value="update"/>
+                        </div>
+                        <div class="col">
+                            <a asp-action="Index" class="btn btn-danger w-75">Back</a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</form>
+
+@section Scripts
+{
+    @{
+        <partial name="_ValidationScriptsPartial" />
+    }
+}
