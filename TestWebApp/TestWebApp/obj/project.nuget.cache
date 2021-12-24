@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "aGHYZvecjZpMkjIiMeNVrJsGYTnr1u3aggZrQU7IVTGo292+dxmQyKpn5/e/Ig73lJOUoyDislRaVRuiFCLvIA==",
+  "dgSpecHash": "fcLQf0gvqqOQikfXdRQE6imS0eTnekgMq/1rJt/CE43De+03TxSsnCXcskopyrewsysnjjbfOKty/NfTQbDIIQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\vasko\\source\\repos\\TestWebApp\\TestWebApp\\TestWebApp.csproj",
+  "projectFilePath": "C:\\Users\\vasko\\OneDrive\\Документи\\GitHub\\TestWebApp\\TestWebApp\\TestWebApp\\TestWebApp.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\vasko\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\vasko\\.nuget\\packages\\microsoft.aspnetcore.html.abstractions\\2.2.0\\microsoft.aspnetcore.html.abstractions.2.2.0.nupkg.sha512",

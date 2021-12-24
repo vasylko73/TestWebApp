@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\vasko\\source\\repos\\TestWebApp\\TestWebApp\\TestWebApp.csproj": {}
+    "C:\\Users\\vasko\\OneDrive\\Документи\\GitHub\\TestWebApp\\TestWebApp\\TestWebApp\\TestWebApp.csproj": {}
   },
   "projects": {
-    "C:\\Users\\vasko\\source\\repos\\TestWebApp\\TestWebApp\\TestWebApp.csproj": {
+    "C:\\Users\\vasko\\OneDrive\\Документи\\GitHub\\TestWebApp\\TestWebApp\\TestWebApp\\TestWebApp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\vasko\\source\\repos\\TestWebApp\\TestWebApp\\TestWebApp.csproj",
+        "projectUniqueName": "C:\\Users\\vasko\\OneDrive\\Документи\\GitHub\\TestWebApp\\TestWebApp\\TestWebApp\\TestWebApp.csproj",
         "projectName": "TestWebApp",
-        "projectPath": "C:\\Users\\vasko\\source\\repos\\TestWebApp\\TestWebApp\\TestWebApp.csproj",
+        "projectPath": "C:\\Users\\vasko\\OneDrive\\Документи\\GitHub\\TestWebApp\\TestWebApp\\TestWebApp\\TestWebApp.csproj",
         "packagesPath": "C:\\Users\\vasko\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\vasko\\source\\repos\\TestWebApp\\TestWebApp\\obj\\",
+        "outputPath": "C:\\Users\\vasko\\OneDrive\\Документи\\GitHub\\TestWebApp\\TestWebApp\\TestWebApp\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
